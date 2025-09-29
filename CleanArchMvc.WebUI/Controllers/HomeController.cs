@@ -1,7 +1,6 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using CleanArchMvc.WebUI.Models;
-using Microsoft.Extensions.Logging;
 
 namespace CleanArchMvc.WebUI.Controllers;
 
