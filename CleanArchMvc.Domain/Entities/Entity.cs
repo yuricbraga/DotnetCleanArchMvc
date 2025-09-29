@@ -1,5 +1,3 @@
-using System;
-
 namespace CleanArchMvc.Domain.Entities;
 
 public abstract class Entity

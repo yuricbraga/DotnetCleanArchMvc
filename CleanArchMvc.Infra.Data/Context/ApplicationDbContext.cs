@@ -1,4 +1,3 @@
-using System;
 using CleanArchMvc.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 

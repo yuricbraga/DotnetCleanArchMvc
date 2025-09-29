@@ -1,4 +1,3 @@
-using System;
 using CleanArchMvc.Domain.Validation;
 
 namespace CleanArchMvc.Domain.Entities;

@@ -1,4 +1,3 @@
-using System;
 using CleanArchMvc.Domain.Entities;
 
 namespace CleanArchMvc.Domain.Interfaces;
