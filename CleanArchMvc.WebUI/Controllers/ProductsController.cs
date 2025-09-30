@@ -14,7 +14,7 @@ public class ProductsController : Controller
 
   // GET: ProductsController
   [HttpGet]
-  public async Task<ActionResult> Index()
+  public async Task<IActionResult> Index()
   {
     var products = await _productsService.GetProducts();
     return View(products);

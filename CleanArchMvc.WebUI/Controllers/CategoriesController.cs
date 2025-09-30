@@ -14,7 +14,7 @@ public class CategoriesController : Controller
 
   // GET: CategoriesController
   [HttpGet]
-  public async Task<ActionResult> Index()
+  public async Task<IActionResult> Index()
   {
     var categories = await _categoryService.GetCategories();
     Console.WriteLine(categories);
