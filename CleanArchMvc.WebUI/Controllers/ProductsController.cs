@@ -9,11 +9,17 @@ public class ProductsController : Controller
 {
   private readonly IProductService _productsService;
   private readonly ICategoryService _categoryService;
+  private readonly IWebHostEnvironment _environment;
 
-  public ProductsController(IProductService productService, ICategoryService categoryService)
+  public ProductsController(
+    IProductService productService,
+    ICategoryService categoryService,
+    IWebHostEnvironment environment
+  )
   {
     _productsService = productService;
     _categoryService = categoryService;
+    _environment = environment;
   }
 
   [HttpGet]
@@ -97,6 +103,11 @@ public class ProductsController : Controller
 
     var product = await _productsService.GetById(id);
     if (product == null) return NotFound();
+
+    var webRoot = _environment.WebRootPath;
+    var imagePath = Path.Combine(webRoot, "images\\", product.Image);
+    var exists = System.IO.File.Exists(imagePath);
+    ViewBag.ImageExists = exists;
 
     return View(product);
   }
